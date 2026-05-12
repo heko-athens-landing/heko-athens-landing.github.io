@@ -330,6 +330,23 @@
     .quote-text { font-family: var(--fd); font-size: clamp(22px, 4vw, 38px); font-style: italic; font-weight: 300; line-height: 1.55; color: var(--cream); }
     .quote-attr { margin-top: 32px; font-size: 11px; font-weight: 300; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
 
+    /* ─── REVIEWS ───────────────────────────────── */
+    .reviews { background: var(--bg3); padding: 120px 48px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .reviews-inner { max-width: 1080px; margin: 0 auto; }
+    .reviews-score-wrap { display: flex; align-items: center; gap: 28px; justify-content: center; margin-top: 28px; }
+    .reviews-score { font-family: var(--fd); font-size: 96px; font-weight: 300; color: var(--gold); line-height: 1; }
+    .reviews-score-meta { text-align: left; }
+    .reviews-score-label { display: block; font-family: var(--fd); font-size: 28px; font-weight: 300; color: var(--cream); margin-bottom: 6px; }
+    .reviews-score-sub { font-size: 10px; font-weight: 300; letter-spacing: .38em; text-transform: uppercase; color: var(--muted); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 72px; }
+    .review-card { background: var(--bg2); padding: 40px 36px; border-top: 2px solid var(--gold); }
+    .review-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; }
+    .reviewer-name { font-size: 13px; font-weight: 400; color: var(--cream); letter-spacing: .04em; margin-bottom: 5px; }
+    .reviewer-origin { font-size: 11px; font-weight: 300; color: var(--muted); }
+    .review-rating { font-family: var(--fd); font-size: 30px; font-weight: 300; color: var(--gold); line-height: 1; white-space: nowrap; }
+    .review-text { font-family: var(--fd); font-size: 16px; font-style: italic; font-weight: 300; line-height: 1.72; color: rgba(242,232,213,.75); }
+    .review-date { margin-top: 24px; font-size: 10px; font-weight: 300; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+
     /* ─── LOCATION ───────────────────────────────── */
     .location-strip {
       background: var(--bg3);
@@ -403,6 +420,11 @@
       .am-item { padding: 36px 16px 30px; }
       .am-icon { width: 48px; height: 48px; }
       .moon { top: 32px; right: 32px; width: 32px; height: 32px; }
+      .reviews { padding: 90px 24px; }
+      .reviews-score { font-size: 64px; }
+      .reviews-score-label { font-size: 22px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .review-card { padding: 32px 28px; }
     }
     @media (max-width: 480px) {
       footer { flex-direction: column; text-align: center; }
@@ -607,6 +629,96 @@
     <span class="quote-mark">"</span>
     <p class="quote-text">Athens is not just a city. It is a place where every stone remembers eternity. We built a hotel that helps you feel exactly that.</p>
     <p class="quote-attr">— Heko Collection</p>
+  </div>
+</section>
+
+<!-- ═══════════════ REVIEWS ═══════════════ -->
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="sec-head reveal">
+      <span class="sec-label">Guest Reviews</span>
+      <div class="reviews-score-wrap">
+        <span class="reviews-score">9.4</span>
+        <div class="reviews-score-meta">
+          <span class="reviews-score-label">Exceptional</span>
+          <span class="reviews-score-sub">reviewed on Booking.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <p class="reviewer-name">Sarah M.</p>
+            <p class="reviewer-origin">🇬🇧 United Kingdom</p>
+          </div>
+          <span class="review-rating">10</span>
+        </div>
+        <p class="review-text">"A hidden gem in Pangrati. The apartment is even more beautiful in person — the photos don't do it justice. Immaculately clean, fully equipped kitchen, and the location is ideal. We walked to the Panathenaic Stadium in eight minutes."</p>
+        <p class="review-date">April 2026</p>
+      </div>
+
+      <div class="review-card reveal d1">
+        <div class="review-top">
+          <div>
+            <p class="reviewer-name">Marco D.</p>
+            <p class="reviewer-origin">🇩🇪 Germany</p>
+          </div>
+          <span class="review-rating">9.6</span>
+        </div>
+        <p class="review-text">"A stylish, quiet retreat after long days of exploring. The design is sophisticated without feeling cold. Hosts were very responsive and check-in was seamless. Highly recommended for couples who appreciate quality."</p>
+        <p class="review-date">March 2026</p>
+      </div>
+
+      <div class="review-card reveal d2">
+        <div class="review-top">
+          <div>
+            <p class="reviewer-name">Anastasia P.</p>
+            <p class="reviewer-origin">🇬🇷 Greece</p>
+          </div>
+          <span class="review-rating">10</span>
+        </div>
+        <p class="review-text">"We spent a long weekend here and were completely won over. The neighbourhood is wonderfully authentic — local cafés and tavernas on every corner. The rain shower alone was worth the trip."</p>
+        <p class="review-date">February 2026</p>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div>
+            <p class="reviewer-name">Thomas R.</p>
+            <p class="reviewer-origin">🇫🇷 France</p>
+          </div>
+          <span class="review-rating">9.2</span>
+        </div>
+        <p class="review-text">"Well located, close to the metro and the Panathenaic Stadium. The apartment is clean and beautifully decorated. The neighbourhood feels like the real Athens — quiet and residential. Would stay again without hesitation."</p>
+        <p class="review-date">March 2026</p>
+      </div>
+
+      <div class="review-card reveal d1">
+        <div class="review-top">
+          <div>
+            <p class="reviewer-name">Julia K.</p>
+            <p class="reviewer-origin">🇸🇪 Sweden</p>
+          </div>
+          <span class="review-rating">9.8</span>
+        </div>
+        <p class="review-text">"One of the most thoughtfully designed stays I've had in Europe. Fully equipped, immaculate, décor that is genuinely beautiful. The Pangrati area surprised us — so much character. Great value for central Athens."</p>
+        <p class="review-date">January 2026</p>
+      </div>
+
+      <div class="review-card reveal d2">
+        <div class="review-top">
+          <div>
+            <p class="reviewer-name">Elena V.</p>
+            <p class="reviewer-origin">🇷🇺 Russia</p>
+          </div>
+          <span class="review-rating">10</span>
+        </div>
+        <p class="review-text">"Everything was perfect from the moment we arrived. The apartment is beautifully designed and very comfortable. Being able to cook in a proper kitchen made a real difference. The Acropolis in twenty minutes on foot — wonderful."</p>
+        <p class="review-date">April 2026</p>
+      </div>
+    </div>
   </div>
 </section>
 
